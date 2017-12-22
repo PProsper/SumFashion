@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Sum Fashion</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.slider').bxSlider({
+	  auto:true,
+	  speed:3000,
+  	  adaptiveHeight: true,
+	  responsive:true,
+	  slideMargin:10,
+	  touchEnabled: true,
+	  infiniteLoop: true,
+	  pager:false,
+	  pagerType: 'short',
+	  controls: false,
+	  shrinkItems:true,
+
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="CSS/styles.css">
+<style> 
+body{
+	background-image: none;	
+	}
+main{
+		height: 750px;
+	}
+.imgs{
+	position: relative;
+	height: 690px;
+	}
+.bx-wrapper{
+	background: none;
+	border: none;
+	display:inline-block;
+	}
+.burg{
+	visibility: visible;	
+	}
+footer{
+	height: 0%;
+	}
+footer p,.footnav h3{
+	color: black;
+	}
+
+.footnav{
+	width: 800px;
+	margin-left: 20%;
+	}
+.footnav {
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 25%;
+    width: 1280px;
+	}
+
+
+</style>
+</head>
+
+<body>
+	<header> 
+	 <div id="hback">  
+		 <img class="logo" src="images/Sum-Fashion.png" alt="">
+		  <img class="logo2" src="images/Sum-Fashion3.png" alt="">
+		 <img class="burg" src="images/sumburger.png" alt="">
+	 </div>
+	</header>
+<main>
+	<div class="slider">
+	  <div class="imgs"><img src="images/bg1.jpg"></div>
+	  <div class="imgs"><img src="images/bg2.jpg"></div>
+	  <div class="imgs"><img src="images/bg3.jpg"></div>
+	  
+
+
+	</div>
+</main>
+<footer>
+	<div class="footnav">
+	<a href="shop.html"><h3 class="about"> SHOP </h3></a>
+	<a href="brands.html"><h3 class="contact"> BRANDS </h3></a>
+	<a href="about.html"><h3 class="about"> ABOUT </h3></a>
+	<a href="contact.html"><h3 class="contact"> CONTACT </h3></a>
+	</div>
+		<div class="dis">
+	<p class="copy">Copyright &copy; Sum-Fashion.com </p>
+	<p class="source"> images sourced &#64;Unsplash.com</p>
+	</div>
+	<div class="icons">
+		<a href="https://www.facebook.com/"><img class="sm" src="images/fbicon.png" alt=""></a>
+		<a href="https://www.instagram.com"><img class="sm" src="images/insta.png" alt=""></a>
+		<a href="https://www.pinterest.com/"><img class="sm" src="images/pin.png" alt=""></a>
+		<a href="https://twitter.com"><img class="sm" src="images/twit.png" alt=""></a>
+	 </div>
+
+</footer>
+</body>
+</html>

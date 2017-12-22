@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sum-Contact</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet"> 
+<style>
+	.page{
+		margin-top: 2%;
+	}
+	h1{
+		color: white;
+	}
+	h2{
+		height: auto;
+	}
+	#left{
+	margin-top: 2%;
+	font-family: 'Merriweather Sans', sans-serif;
+	color: white;
+	margin-left:  15%;
+	display: inline-block;
+	}
+	#right{
+	float: right;
+	margin-top: 2%;
+	font-family: 'Merriweather Sans', sans-serif;
+	color: white;
+	margin-right:  10%;
+	display: inline-block;
+	}
+	p, .pref, h3{
+
+	 margin-bottom: 20px;
+	}
+	.text{
+	margin-bottom: 10px;
+	height: 20px;
+	}
+	#name, #email,#phone,#message{
+	
+	width: 400px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	}
+	#heading{
+		font-family: 'Merriweather Sans', sans-serif;
+		color: white;
+		width: 100%;
+		margin-left: 40%;
+		margin-right: 50%;
+	}
+	#submit{
+		height: 30px;
+		width: 50px;
+	}
+	a{
+		color: grey;
+	}
+	.footnav{
+		 margin-left: 45%;
+	}
+</style>
+</head>
+
+<body>
+<div class="opacity">
+<header> 
+	 <div id="hback">  
+		 <img class="logo" src="images/Sum-Fashion.png" alt="">
+		 <img class="logo2" src="images/Sum-Fashion3.png" alt="">
+		 <img class="burg" src="images/sumburger.png" alt="">
+	 </div>
+</header>
+<div class="nav">
+ <nav>
+ 	<ul>
+ 		<a href="index.html"><li>HOME </li></a>
+ 		<a href="shop.html"><li> SHOP </li></a>
+ 		<a href="brands.html"><li> BRANDS </li></a>
+ 		<a href="culture.html"><li> CULTURE </li></a>
+ 		<a href="cart.html"><div class="cartblock"><a href=""> <p> CART </p><img class="cart" src="images/cart-1.png" alt=""></a></div></a>
+	<div class="search">
+    <form class="searchbox">
+        <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+        <input type="submit" class="searchbox-submit" value=" ">
+        <div class="searchbox-icon"><img src="images/search-1.png"></div>
+    </form>
+</div>
+ 	</ul>
+ </nav>
+</div>
+
+		 <div class="page"> <h1> CONTACT </h1> </div>
+			
+				<div id="heading">
+					<h2> Have any questions or concerns?... </h2>
+					<h2>We're happy to hear from you.</h2>
+				</div>
+				<form id="left" action="">
+				<p id="email">
+					<label for="email">Email:</label> <br>
+					<input  type="text" name="email" maxlength="50" placeholder="sumone@gmail.com" class="text">
+				</p>
+
+				<p id="name">
+					<label for="fname">Name: </label> <br>
+					<input type="text" name="fname" maxlength="50" placeholder="First" class="text">
+					<input type="text" name="lname" maxlength="50" placeholder="Last" class="text"  >
+				</p> 	
+
+				<p id="phone">
+					<label for="phone">Phone:</label> <br>
+					<input type="text" name="phone" maxlength="7" placeholder="_ _ _ - _ _ _ - _ _ _ _" class="text" >
+				</p>
+				
+				<h3> Whats the best way for use to get back to you?</h3>
+
+				<p class="pref">
+				<input type="radio" class="radio" value="email" name="pref"> Email
+				</p>
+				<p class="pref">
+				  <input type="radio" class="radio" value="phone" name="pref"> Phone
+
+				</p>
+				<p class="pref">
+				  <input type="radio" class="radio" value="mail" name="pref"> Mail
+	
+				</p>
+
+				<p>
+					<input type="checkbox" name="nwsltr" id=""> Sign-up for newsletter
+				</p>
+				<input id="submit" type="submit" value="send"> <a href=""> Clear </a>
+			</form>				
+		<form id="right" action="">
+					
+					<p id="message">
+					<label for="msg">Message</label> <br>
+					<textarea name="msg" cols="50" rows="24" id="" ></textarea>
+					<!-- to increase the size of the textbox use for example: cols="30" rows="10"-->
+				</p>
+		</form>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>	
+  			$(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }	
+</script>
+ 
+	</div>
+<footer>
+	<div class="footnav">
+	<a href="about.html"><h3 class="about"> ABOUT </h3></a>
+	</div>
+
+	<div class="dis">
+	<p class="copy">Copyright &copy; Sum-Fashion.com </p>
+	<p class="source"> images sourced &#64;Unsplash.com</p>
+	</div>
+		<div class="icons">
+		<a href="https://www.facebook.com/"><img class="sm" src="images/fbicon2.png" alt=""></a>
+		<a href="https://www.instagram.com"><img class="sm" src="images/insta2.png" alt=""></a>
+		<a href="https://www.pinterest.com/"><img class="sm" src="images/pin2.png" alt=""></a>
+		<a href="https://twitter.com"><img class="sm" src="images/twit2.png" alt=""></a>
+	 </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sum-Fashion-About</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Arimo|Libre+Franklin" rel="stylesheet">
+<style>
+	.whiteboard{
+		height: 600px;
+		background-image:  url(images/sumburgerg.png), url(images/sumlogow.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	#left{
+		height: 452px;
+		width: 433px;
+		position: relative;
+		float: left;
+	}
+	#statement{
+		height:216px;
+		width: 600px;
+		margin-bottom: 40px;
+		padding: 20px, 20px,20px,20px;
+		position: relative;
+	}
+	#vision{
+		height:235px;
+		width: 600px;
+		padding: 20px, 20px,20px,20px;
+		position: relative;
+	}
+
+	#inlogo{
+		margin-top: 3%;
+	}
+	p{
+		margin-top: 3%;
+	}
+	#info{
+		height: 492px;																			
+		width: 433px;
+		float: right;
+		padding: 20px, 20px,20px,20px;
+		overflow-y:scroll;
+	}
+	#info p{
+		font-size: 32px;
+		font-family: 'Merriweather Sans', sans-serif;
+		margin-top: 10px;
+	}
+	#info a{ 
+		text-decoration: underline;
+	}
+	.cont{
+		margin-left: 5%;
+		margin-right: 5%;
+		border: 1px solid black;	
+		text-align: center;
+	}
+	.cont h2{
+		margin-top: 5px;
+		font-size: 36px;
+		font-family: 'Arimo', sans-serif ;
+		color: purple;	
+	}
+	
+@media only screen and (max-width:1282px){	
+		#statement{
+		height:216px;
+		width: 500px;
+	}
+	#vision{
+		height:235px;
+		width: 500px;
+	}
+}
+</style>
+</head>
+
+<body>
+	<div class="opacity">
+	<header> 
+		 <div id="hback">  
+			 <img class="logo" src="images/Sum-Fashion.png" alt="">
+			 <img class="logo2" src="images/Sum-Fashion3.png" alt="">
+			 <img class="burg" src="images/sumburger.png" alt="">
+		 </div>
+	</header>
+<div class="nav">
+ <nav>
+ 	<ul>
+ 		<a href="index.html"><li>HOME </li></a>
+ 		<a href="shop.html"><li> SHOP </li></a>
+ 		<a href="brands.html"><li> BRANDS </li></a>
+ 		<a href="culture.html"><li> CULTURE </li></a>
+ 		<a href="cart.html"><div class="cartblock"><a href=""> <p> CART </p><img class="cart" src="images/cart-1.png" alt=""></a></div></a>
+	<div class="search">
+    <form class="searchbox">
+        <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+        <input type="submit" class="searchbox-submit" value=" ">
+        <div class="searchbox-icon"><img src="images/search-1.png"></div>
+    </form>
+</div>
+ 	</ul>
+ </nav>
+</div>
+	<div class="whiteboard"> 
+		
+		<div class="page"> <h1> ABOUT </h1> </div>
+		<div id="left">
+		<div class="cont" id="statement"> <h2> Brand Statement </h2> 
+		
+			<p> The Sum-Fashion culture is all inclusive.</p>
+			<p> Our culture is all culture. </p>
+			<p> We know that you have a strong sense of who you are and what you want,</p>
+			<p> and we're here to give it to you.</p>
+		
+		</div>
+		<div class="cont" id="vision"> <h2> Vision </h2>
+		<p> The brain child of a tech savy fashion student,</p>
+		<img id="inlogo" src="images/Sum-Fashion3.png" alt="">
+		<p> is about the summation of culture meets futurism and much more.</p>
+		<p> The brand is dedicated to fashion and culture as much as it is innovation.</p>
+		</div>
+		</div>
+		<div class="cont" id="info"> <h2> Info </h2>
+		
+			<a href=" "><p>Privacy Policy</p></a>
+			<a href=" "><p>Terms &amp; Conditions</p></a>
+			<a href=" "><p>Delivery</p></a>
+			<a href=" "><p>Payment Methods</p></a>
+			<a href=" "><p>Returns &amp; Exchanges</p></a>
+			<a href=" "><p>Brands</p></a>
+			<a href=" "><p>FAQ</p></a>
+			<a href=" "><p>Store Credit</p></a> 
+			<a href=" "><p>Membership</p></a>
+			<a href=" "><p>Contact Us</p></a>
+		
+		
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>	
+  		$(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }	
+</script>
+ 
+</div>
+<footer>
+	<div class="footnav">
+	<a href="about.html"><h3 class="about"> ABOUT </h3></a>
+	<a href="contact.html"><h3 class="contact"> CONTACT </h3></a>
+	</div>
+
+	<div class="dis">
+	<p class="copy">Copyright &copy; Sum-Fashion.com </p>
+	<p class="source"> images sourced &#64;Unsplash.com</p>
+	</div>
+		<div class="icons">
+		<a href="https://www.facebook.com/"><img class="sm" src="images/fbicon2.png" alt=""></a>
+		<a href="https://www.instagram.com"><img class="sm" src="images/insta2.png" alt=""></a>
+		<a href="https://www.pinterest.com/"><img class="sm" src="images/pin2.png" alt=""></a>
+		<a href="https://twitter.com"><img class="sm" src="images/twit2.png" alt=""></a>
+	 </div>
+</footer>
+
+<script>	
+  $(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }	
+</script>
+ 
+</body>
+</html>

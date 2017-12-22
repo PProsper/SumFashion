@@ -1,0 +1,316 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding: 0;
+}
+html{
+	overflow: hidden;
+	overflow-x:scroll;
+	overflow-y:scroll;	
+}
+#opacity{
+		background-color: rgba(255,255,255,.5);
+	}
+body{
+	height: 100%;
+	width: 100%;
+	background-image: url(../images/sky-lights-space-dark.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+
+}
+#hback{
+	height: 60px;
+	width: 100%;
+	background-color: white;
+	background-size: cover;
+	float:left;
+}
+.logo{
+	margin-top: 10px;
+	margin-left: 10px;
+	float:left;
+	height: 48px;
+	width: 600px;
+
+}
+.logo2{
+	margin-top: 10px;
+	margin-left: 10px;
+	float:left;
+	height: 48px;
+	width: 600px;
+	display: none;
+}
+.burg{
+	height: 50px;
+	width: 62px;
+	margin-top: 5px;
+	margin-right: 70px;
+	display:inline;
+	visibility: hidden;
+	float: right;
+}
+nav{
+	display: inline;
+}
+.nav{
+	display: inline-block;
+	height: 110px;
+	width: 100%;
+	background-image:url(../images/starynighthead.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.nav p{
+	display: inline-block;
+}
+.cartblock{
+	height: 100px;
+	width: 60px;
+	list-style:none;
+	display: inline;
+	margin-left: 8%;
+}
+.cartblock p{
+	position: absolute;
+	margin-top: 40px;
+	color: white;
+	font-family: 'Arimo', sans-serif ;
+	font-size: 10pt;
+}
+
+.search{
+	width: 100%;
+	display: inline;
+	
+}
+
+.searchbox{
+    position:relative;
+    min-width:50px;
+    width:0%;
+    height:50px;
+    float:right;
+    overflow:hidden;
+	display: inline;
+	list-style-type: none;
+	margin-right: 12%;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+.searchbox-input{
+    top:0;
+    right:0;
+    outline:0;
+	border: solid black 1px;
+    width:100%;
+    height:50px;
+    margin:0;
+    padding:0px 55px 0px 20px;
+    font-size:20px;
+    color:black;
+	background-color: rgba(249,249,249,0.28);
+}
+.searchbox-input::-webkit-input-placeholder {
+    color: grey;
+}
+.searchbox-input:-moz-placeholder {
+    color: grey;
+}
+.searchbox-input::-moz-placeholder {
+    color: grey;
+}
+.searchbox-input:-ms-input-placeholder {
+    color: grey;
+	margin-right: 2%;
+}
+
+.searchbox-icon,
+.searchbox-submit{
+    width:50px;
+    height:50px;
+    display:block;
+    position:absolute;
+    top:0;
+    font-family:verdana;
+    font-size:22px;
+    right:0;
+    padding:0;
+    margin-top:4px;
+	
+    border:0;
+    outline:0;
+    line-height:50px;
+    text-align:center;
+    cursor:pointer;
+    background-color: rgba(249,249,249,-50);
+    
+}
+.searchbox-open{
+    width:100%;
+}
+
+li{
+	color: white;
+	display: inline;
+	word-spacing: 10px;
+	margin-left: 8%;
+	font-family: 'Arimo', sans-serif ;
+	font-size: 18pt;
+	padding: 10px;
+}
+ul{
+	margin-top: 50px;
+}
+a{
+	text-decoration: none;
+}
+.opacity{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,.2);
+}
+.whiteboard{
+	margin-left: 2%;
+	margin-right: 2%;
+    margin-top: 3px;
+	padding: 40px;
+	background-color: white;
+}
+.page{
+	height: 46px;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+h1{
+ color: black;
+ font-family: 'Libre Franklin', sans-serif;
+}
+footer{
+	height: 100px;
+	width: 100%;
+	background-color: rgba(255,255,255,.1);
+}
+footer p{
+	margin-right: 1%;
+	padding: 5px;
+	font-family: 'Arimo', sans-serif ;
+	color: lightgray;
+	display: inline-block;
+}
+
+.footnav {
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 40%;
+    width: 1280px;
+	}
+.dis {
+    width: 600px;
+    display: inline-block;
+    margin-left: 4%;
+	}
+.icons {
+	float: none;
+    display: inline-block;
+    margin-left: 40%;
+	margin-right: 0;
+}
+.footnav h3{
+	color: white;
+	display: inline;
+	margin-left: 80px;
+	font-family: 'Arimo', sans-serif ;
+}
+
+.sm{
+	margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px){
+	nav{
+		display: none;
+	}
+	.burg{
+		visibility:visible;
+		float: none;
+	}
+	body{
+		background-image: none;
+	}
+	.logo{
+		display: none
+	}
+	.logo2{
+		display: inline;
+	}
+	footer p{
+		color: black;
+	}
+	.icons{
+		float: none;
+		margin-left: 20%;
+		display: inline-block;
+		margin-top: 2%;
+	}
+}
+@media only screen and (max-width:1282px){
+	html{
+	overflow: hidden;
+	overflow-y:scroll;	
+}
+	body{
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/sky-lights-space-dark3.png);
+		background-size:cover;
+		background-repeat: no-repeat;
+	}
+	.searchbox{
+		margin-right: 2%;
+	}
+	footer{
+		height: 120px;
+	}
+		.icons{
+		float: none;
+		margin-left: 20%;
+		display: inline-block;
+		margin-top: 2%;
+	}
+}
+@media only screen and (max-width: 320px){
+
+	.logo{
+	display: none;
+	}
+	.logo2{
+	margin-top: 10px;
+	margin-left: 10px;
+	float:left;
+	height: 48px;
+	width: 600px;
+	visibility: visible;
+	}
+	.burg{
+	visibility:visible;
+	float: none;
+	}
+}
+
+		
+
+/*
+height: 80px;
+	background-image: url(../images/starynightfoot.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}*/
